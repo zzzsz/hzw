@@ -1,0 +1,16 @@
+aside {
+    float: left;
+    width: 10%;
+    height: 100%;
+    display: block;
+    background-image: url("../img/onepiece1.png");
+    opacity: 80%;
+}
+
+aside p{
+    color: black;
+}
+
+aside a{
+    text-decoration: none;
+}
