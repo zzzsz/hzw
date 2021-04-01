@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<!--        <META http-equiv="Content-Type" content="text/html; charset=gb2312">-->
+<!--        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">-->
+<!--        <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">-->
+<!--        <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">-->
+<!--        <META HTTP-EQUIV="Expires" CONTENT="0">-->
+        <title>登录界面</title>
+        <link rel="stylesheet" href="css/logInBG.css"/>
+        <script>
+            function LogInOnClick() {
+                let user = document.getElementById("userId");
+                let pw = document.getElementById("password");
+                if (String(user.value) == "") {
+                    alert("用户名不能为空");
+                    return;
+                }
+                if (String(pw.value) == "") {
+                    alert("密码不能为空");
+                    return;
+                }
+                if (user.value == pw.value) {
+                    alert("登陆成功");
+                    window.location.href = "homePage.html";
+                } else {
+                    alert("密码错误");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="font-size: 50px; text-align: right; position: absolute; right: 200px; top: 20px">海贼王登录界面</h1>
+        <div style="position: absolute; left: 30.5%; top:21%; color:#865423; font-size: 25px">
+            <form style="text-align: right">
+                <label for="userId">用户名：</label>
+                <input type="text" id="userId" aria-placeholder="请输入用户名" style="vertical-align: middle; height: 25px; background-color:rgb(229, 208, 141)"/><br/>
+                <label for="password" style="line-height: 40px">密码：</label>  <!--line-height设置行距, 但是对下面两个按钮没用, 因此用一个div来辅助-->
+                <input type="password" id="password" aria-placeholder="请输入密码"  style="vertical-align: middle; height: 25px; background-color:rgb(229, 208, 141)"/><br/>
+                <div style="line-height: 60px">
+                    <input type="button" value="注册" style="margin-right: 10px; font-size: 20px; background-color:rgb(229, 208, 141)"/>
+                    <input type="button" value="登录" onclick="LogInOnClick()" style="margin-right: 15px; font-size: 20px; background-color:rgb(229, 208, 141) "/>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
